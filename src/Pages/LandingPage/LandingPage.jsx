@@ -1,10 +1,18 @@
 import { Box, Grid, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import mobiles from '../../assets/mobiles.png'
 import Footer from '../../Components/footer/Footer'
-import {data} from '../../Data/data'
+import {data, datas} from '../../Data/data'
+import { useDispatch } from 'react-redux'
+import { SetuserAllmonthData } from '../../Redux/userActivitySlice'
 
 const LandingPage = () => {
+
+ const dispatch=useDispatch()
+
+ useEffect(()=>{
+     dispatch(SetuserAllmonthData(datas))
+ },[])
 
   return (
     <Box>
@@ -30,7 +38,7 @@ const LandingPage = () => {
               zIndex: 2, 
             }}
           >
-            Earning rewards has never been so easy
+            Lorem ipsum, dolor sit amet consectetur ipsum
           </Typography>
           <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut aliquid minus dolor eius autem debitis fuga culpa et sunt tempora.</Typography>
         </Grid>
@@ -58,7 +66,7 @@ const LandingPage = () => {
           How It Works
         </Typography>
         <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', marginBottom: 4 }}>
-          What we will do to track our Finance?
+          What you will do to track our Finance?
         </Typography>
 
         <Grid container spacing={4} justifyContent="center">

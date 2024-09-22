@@ -4,7 +4,7 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import MoneyIcon from '@mui/icons-material/Money';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import SavingsIcon from '@mui/icons-material/Savings';
-import {indexing} from '../Data/data'
+import {indexing,month} from '../Data/data'
 import { useDispatch, useSelector } from 'react-redux';
 import { addsalarydata, Setmonth, setuserData } from '../Redux/userActivitySlice';
 import CurrencyCon from '../Components/Corrancies/CurrencyCon';
@@ -39,6 +39,7 @@ const Cards=()=>{
 
  //SET MONTH-->>
  const handleChange=(e)=>{
+    // console.log("first",e.target.value);
      dispatch(Setmonth(e.target.value))
      setmonths(e.target.value);
     }
@@ -79,7 +80,6 @@ const Cards=()=>{
 
     return (
     <Box >
-        
         <Box >
             <Card sx={{display:'flex',justifyContent:'space-between',alignItems:'center', padding:'10px', borderRadius:'15px',marginTop:'15px'}}>
                 <Box>
@@ -95,8 +95,11 @@ const Cards=()=>{
                         onChange={handleChange}
                         width='200px'
                       >
-                        <MenuItem  value='August'>August</MenuItem>
-                        <MenuItem value='September'>September</MenuItem>
+                        {
+                            month.map((month,index)=>(
+                                <MenuItem key={index} value={month}>{month}</MenuItem>
+                            ))
+                        }
                     </Select>
                   </FormControl>
             </Card>

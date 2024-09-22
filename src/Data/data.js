@@ -1,13 +1,27 @@
-
 import image from '../assets/image.png'
 import image2 from '../assets/image2.png'
 import image3 from '../assets/image3.png'
-export const indexing={
+export const indexing2={
   'August':0,
   'September':1
 }
 
-export const categories = ["Rent", "Health", "Grocery", "Shopping", "EnterT"];
+export const indexing= {
+  'January': 0,
+  'February': 1,
+  'March': 2,
+  'April': 3,
+  'May': 4,
+  'June': 5,
+  'July': 6,
+  'August': 7,
+  'September': 8,
+  'October': 9,
+  'November': 10,
+  'December': 11
+};
+
+export const categories = ["Rent", "Health", "Grocery", "Shopping", "EnterT","Bill"];
 
 export const data=[
   {
@@ -47,7 +61,7 @@ export const salarydata = {
   'December': [39000, 8000]
 };
 
-export const datas = [
+export const datas2 = [
     {
       August:[
         {
@@ -106,9 +120,7 @@ export const datas = [
     },
   ];
   
-
-
-  export const datas2 = [
+export const datas = [
     {
       January: [
         {
@@ -126,15 +138,7 @@ export const datas = [
           category: "Grocery",
           date: "15 01 at 11:30 am",
           mode: "Cash",
-        },
-        {
-          id: 3,
-          title: "Internet Bill",
-          expenses: 800,
-          category: "Utilities",
-          date: "25 01 at 08:30 am",
-          mode: "Online",
-        },
+        }
       ],
     },
     {
@@ -143,38 +147,22 @@ export const datas = [
           id: 1,
           title: "Electricity Bill",
           expenses: 1200,
-          category: "Utilities",
+          category: "Bill",
           date: "10 02 at 10:30 am",
           mode: "Online",
-        },
-        {
-          id: 2,
-          title: "Dinner with Friends",
-          expenses: 900,
-          category: "Food & Drinks",
-          date: "20 02 at 08:00 pm",
-          mode: "Cash",
-        },
+        }
       ],
     },
     {
       March: [
         {
           id: 1,
-          title: "Car Maintenance",
+          title: "Electricity Bill",
           expenses: 3000,
-          category: "Transportation",
+          category: "Bill",
           date: "5 03 at 09:00 am",
           mode: "Cash",
-        },
-        {
-          id: 2,
-          title: "Concert Tickets",
-          expenses: 1500,
-          category: "Entertainment",
-          date: "15 03 at 07:30 pm",
-          mode: "Online",
-        },
+        }
       ],
     },
     {
@@ -186,15 +174,7 @@ export const datas = [
           category: "Health",
           date: "1 04 at 06:00 am",
           mode: "Online",
-        },
-        {
-          id: 2,
-          title: "Vacation Booking",
-          expenses: 12000,
-          category: "Travel",
-          date: "18 04 at 01:00 pm",
-          mode: "Online",
-        },
+        }
       ],
     },
     {
@@ -203,35 +183,19 @@ export const datas = [
           id: 1,
           title: "Utility Bill",
           expenses: 1800,
-          category: "Utilities",
+          category: "Bill",
           date: "10 05 at 09:00 am",
           mode: "Online",
-        },
-        {
-          id: 2,
-          title: "Movie Night",
-          expenses: 400,
-          category: "Entertainment",
-          date: "25 05 at 07:00 pm",
-          mode: "Cash",
-        },
+        }
       ],
     },
     {
       June: [
         {
           id: 1,
-          title: "Summer Vacation",
-          expenses: 15000,
-          category: "Travel",
-          date: "10 06 at 02:30 pm",
-          mode: "Online",
-        },
-        {
-          id: 2,
           title: "New Phone",
           expenses: 20000,
-          category: "Electronics",
+          category: "Shopping",
           date: "22 06 at 03:00 pm",
           mode: "Online",
         },
@@ -241,14 +205,6 @@ export const datas = [
       July: [
         {
           id: 1,
-          title: "Online Course",
-          expenses: 5000,
-          category: "Education",
-          date: "5 07 at 09:30 am",
-          mode: "Online",
-        },
-        {
-          id: 2,
           title: "Groceries",
           expenses: 1200,
           category: "Grocery",
@@ -298,7 +254,7 @@ export const datas = [
         {
           id: 1,
           title: "Gym Membership",
-          expenses: 5000,
+          expenses: 500,
           category: "Health",
           date: "10 09 at 02:30 pm",
           mode: "Online",
@@ -318,19 +274,11 @@ export const datas = [
         {
           id: 1,
           title: "New Laptop",
-          expenses: 60000,
-          category: "Electronics",
+          expenses: 6000,
+          category: "Shopping",
           date: "12 10 at 03:30 pm",
           mode: "Online",
-        },
-        {
-          id: 2,
-          title: "Dining Out",
-          expenses: 1500,
-          category: "Food & Drinks",
-          date: "23 10 at 08:00 pm",
-          mode: "Cash",
-        },
+        }
       ],
     },
     {
@@ -338,35 +286,19 @@ export const datas = [
         {
           id: 1,
           title: "Festival Shopping",
-          expenses: 8000,
+          expenses: 800,
           category: "Shopping",
           date: "05 11 at 05:00 pm",
           mode: "Online",
-        },
-        {
-          id: 2,
-          title: "Gift for Friend",
-          expenses: 2000,
-          category: "Gifts",
-          date: "15 11 at 11:30 am",
-          mode: "Cash",
-        },
+        }
       ],
     },
     {
       December: [
         {
           id: 1,
-          title: "Year-End Party",
-          expenses: 5000,
-          category: "Entertainment",
-          date: "30 12 at 07:00 pm",
-          mode: "Cash",
-        },
-        {
-          id: 2,
           title: "Christmas Shopping",
-          expenses: 9000,
+          expenses: 900,
           category: "Shopping",
           date: "20 12 at 03:30 pm",
           mode: "Online",
@@ -375,9 +307,7 @@ export const datas = [
     },
   ];
   
-
-
- const months = [
+export const month = [
     "January",
     "February",
     "March",

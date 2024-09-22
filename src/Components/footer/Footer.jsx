@@ -22,8 +22,8 @@ const Footer = () => {
           <Link href="/" color="inherit" underline="none">
             Features
           </Link>
-          <Link href="/" color="inherit" underline="none">
-            Pricing
+          <Link href="/dashboard" color="inherit" underline="none">
+            Dashboard
           </Link>
           <Link href="/" color="inherit" underline="none">
             Contact Us
