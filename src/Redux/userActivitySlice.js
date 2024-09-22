@@ -35,6 +35,7 @@ const userActivity = createSlice({
     },
     addnewTransaction:(state,actions)=>{
        state.userAllmonthData[indexing[state.selectedmonth]][state.selectedmonth].push(actions.payload);
+       state.userData=state.userAllmonthData[indexing[state.selectedmonth]][state.selectedmonth];
     },
     setRefresher:(state)=>{
         state.refresher=!state.refresher;

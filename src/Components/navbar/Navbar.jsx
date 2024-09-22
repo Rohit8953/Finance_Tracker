@@ -69,10 +69,18 @@ const Navbar = () => {
             token?(
                 <Button variant="contained" sx={{marginLeft:'6px',bgcolor:'#6D6DF9',color:'white'}} onClick={logouthandler}>Logout</Button>
             ):(
-              <>
-                <Button variant="contained" sx={{marginLeft:'6px',bgcolor:'#6D6DF9',color:'white', fontSize: { xs: '12px', sm: '15px', md: 'auto' }}} onClick={()=>navigate('/login')}>Login</Button>
+              <Box display={"flex"}>
+                <Button variant="contained" 
+                 sx={{
+                  marginLeft: '6px',
+                  bgcolor: '#6D6DF9',
+                  color: 'white',
+                  fontSize: { xs: '12px', sm: '15px', md: 'auto' },
+                  display: { xs: 'none', sm: 'block' }
+                }} 
+                onClick={()=>navigate('/login')}>Login</Button>
                 <Button variant="contained" sx={{marginLeft:'6px',bgcolor:'#6D6DF9',color:'white',fontSize: { xs: '12px', sm: '15px', md: 'auto' }}} onClick={()=>navigate('/signup')}>Signup</Button>
-              </>
+              </Box>
             )
           }
         </Box>

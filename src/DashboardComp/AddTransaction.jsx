@@ -37,12 +37,11 @@ const AddTransaction=()=>{
 
      dispatch(addnewTransaction(data))
      dispatch(setRefresher());
-    console.log("first", refresher);
+    console.log("first,...", userAllmonthData);
     setPopup(false)
   } 
 
   const handleOnChange = (e) => {
-    console.log("name , value");
     const { name, value } = e.target;
     setData((prevData) => ({
       ...prevData,
@@ -53,7 +52,7 @@ const AddTransaction=()=>{
 
   return (
     <Box component="main" className="relative">
-      <Card sx={{ display: 'flex',borderRadius:'15px' ,justifyContent: 'space-between',alignItems:'center',height:'80px',paddingX:'6px', marginTop:'20px' }}>
+      <Card sx={{ display: 'flex',borderRadius:'15px' ,justifyContent: 'space-between',alignItems:'center',height:'80px',paddingX:'6px' }}>
         <Typography variant="h4" sx={{fontSize:{xs: '20px', sm:'40px'}}} color="textPrimary">
           Add your Transaction
         </Typography>

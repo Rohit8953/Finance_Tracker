@@ -40,7 +40,8 @@ const Dashboardpage = () =>{
        <Box sx={{
           bgcolor: darkMode ? '#6D6DF9' : '#F0F0F0', 
           borderRadius: '15px',
-          width: '100%'
+          width: '100%',
+          marginTop:'10px'
         }}>
            <Outlet/>
        </Box>

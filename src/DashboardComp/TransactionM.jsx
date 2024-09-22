@@ -59,8 +59,38 @@ export default function TransactionM() {
                     <TableCell component="th" scope="row">{row.date}</TableCell>
                     <TableCell component="th" scope="row">{row.category}</TableCell>
                     <TableCell component="th" scope="row">{row.mode}</TableCell>
-                    <TableCell onClick={()=>dispatch(deleteTransaction(row))}  component="th" scope="row"><DeleteIcon/></TableCell>
-                    <TableCell component="th" scope="row" onClick={()=>updatehandler(row)}><CreateIcon/></TableCell>
+                    <TableCell onClick={()=>dispatch(deleteTransaction(row))}  component="th" scope="row"
+                       sx={{
+                        cursor: 'pointer', 
+                        '&:hover .icons': { 
+                          bgcolor: 'red', 
+                          transform: 'scale(1.2)', 
+                          borderRadius: '50%', 
+                        },
+                      }}
+                      ><DeleteIcon
+                        className="icons" 
+                        sx={{
+                          transition: 'all 0.2s ease',
+                          padding: '4px', 
+                        }}
+                      /></TableCell>
+                    <TableCell component="th" scope="row" onClick={()=>updatehandler(row)}
+                      sx={{
+                        cursor: 'pointer', 
+                        '&:hover .icon': { 
+                          bgcolor: 'green', 
+                          transform: 'scale(1.2)', 
+                          borderRadius: '50%', 
+                        },
+                      }}
+                      ><CreateIcon
+                        className="icon" 
+                        sx={{
+                          transition: 'all 0.2s ease',
+                          padding: '4px', 
+                        }}
+                      /></TableCell>
                   </TableRow>
                 ))}
               </TableBody>

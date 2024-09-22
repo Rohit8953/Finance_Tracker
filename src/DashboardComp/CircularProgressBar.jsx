@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 export default function CircularProgressBar(){
   
   const [data, setData] = React.useState([]);
-  const{ selectedmonth,userData,userAllmonthData,savingdata}=useSelector(state=>state.useractivity)
+  const{ selectedmonth,userData,userAllmonthData,savingdata,refresher}=useSelector(state=>state.useractivity)
 
   let totalIncom=savingdata[selectedmonth][0];
   
@@ -35,7 +35,9 @@ export default function CircularProgressBar(){
 
       setData(updatedData);
     }
-  }, [selectedmonth,userData,userAllmonthData]);
+  }, [selectedmonth,userAllmonthData]);
+
+  console.log("first,...", refresher);
 
   return (
     <Box  >

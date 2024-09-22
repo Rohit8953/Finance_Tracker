@@ -17,7 +17,7 @@ const AreaChartss = () => {
       setData(updatedData);
     }
   }, [selectedmonth,userAllmonthData,exchangeRate]);
-
+  console.log("first",data);
   return (
     <Box marginY={'20px'}>
       <Card sx={{ padding: '10px', borderRadius: '15px', width: '100%', display: 'inline-block' }}>

@@ -1,20 +1,11 @@
 import { Box, Grid, Typography } from '@mui/material'
-import React, { useEffect } from 'react'
+import React from 'react'
 import mobiles from '../../assets/mobiles.png'
 import Footer from '../../Components/footer/Footer'
-import {data,datas,salarydata} from '../../Data/data'
-import { useDispatch, useSelector } from 'react-redux'
- import { addsalarydata, SetuserAllmonthData } from '../../Redux/userActivitySlice'
-
+import {data} from '../../Data/data'
 
 const LandingPage = () => {
-  const dispatch=useDispatch()
 
-  useEffect(()=>{
-        dispatch(SetuserAllmonthData(datas))
-        dispatch(addsalarydata(salarydata))
-    },[])
-  
   return (
     <Box>
       <Box position={'relative'} mx={'10px'} marginTop={'100px'} 

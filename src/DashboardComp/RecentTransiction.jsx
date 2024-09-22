@@ -32,15 +32,15 @@ const RecentTransiction = () => {
                   <Box
                   sx={{
                       borderRadius: '50%',
-                      bgcolor: '#F5F7FF',
-                      width: 50,
-                      height: 50,
+                      bgcolor: '#767CFF',
+                      width: 30,
+                      height: 30,
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                   }}
                   >
-                     <ShoppingBagOutlinedIcon style={{ color: '#F5C849' }} />
+                     <ShoppingBagOutlinedIcon style={{ color: '#ffff' }} />
                   </Box>
               </Grid>
 
@@ -61,7 +61,6 @@ const RecentTransiction = () => {
                   </Typography>
               </Grid>
             </Grid>
-          
              )})
          }
         </Card>

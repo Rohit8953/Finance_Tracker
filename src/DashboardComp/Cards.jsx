@@ -74,6 +74,9 @@ const Cards=()=>{
     //CURRENT DATE----->>
     const currentDate=new Date().toDateString();
 
+    let currentBalance=array[2].Tincome;
+    let targetSaving=array[1].Tincome;
+
     return (
     <Box >
         
@@ -116,9 +119,45 @@ const Cards=()=>{
                                 }}
                                 >
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                    {item.title}
-                                    </Typography>
+                                    <Box sx={{display:'flex',justifyContent:'space-between'}}>
+                                        <Typography gutterBottom variant="h5" component="div">
+                                        {item.title}
+                                        </Typography>
+                                        {index === 1 && (
+                                            <>
+                                                {currentBalance > targetSaving ? (
+                                                <Box
+                                                    sx={{
+                                                    border: '2px solid green',
+                                                    color:'green',
+                                                    height:'25px',
+                                                    paddingX:'6px',
+                                                    borderRadius: '6px',
+                                                    display: 'inline-block',
+                                                    fontSize:'15px'
+                                                    }}
+                                                >
+                                                    achieved
+                                                </Box>
+                                                ) : (
+                                                <Box
+                                                    sx={{
+                                                    border: '2px solid red',
+                                                    height:'25px',
+                                                    color:'red',
+                                                    paddingX:'6px',
+                                                    borderRadius: '6px',
+                                                    display: 'inline-block',
+                                                     fontSize:'15px',
+                                                     whiteSpace: 'nowrap',
+                                                    }}
+                                                >
+                                                    not achieved
+                                                </Box>
+                                                )}
+                                            </>
+                                        )}
+                                    </Box>
                                     <Box sx={{display:'flex',alignItems:'center',gap:2}}>
                                         <Box sx={{borderRadius: '50%',bgcolor:'#767CFF',width: '50px',height: '50px',display: 'flex',justifyContent: 'center',alignItems: 'center'}}>
                                         {item.icons}
